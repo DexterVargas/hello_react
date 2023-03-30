@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// const trainee = 'Rockstar FE';
+// const element = <h1>Hello, {trainee}!</h1>;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const element = getGreeting('Dexter');
+
+// const element = <a href="https://www.hackerhero.com">Hackerhero</a>;
+
+const kitten = { imgURL: 'https://placekitten.com/200/100' };
+const element = <img src={kitten.imgURL}></img>;
+
+function getGreeting(user) {
+    if (user) {
+        return <h1>Hello, {user}!</h1>;
+    }
+    return <h1>Hello, Stranger!</h1>;
+}
+
+root.render(element);
+
