@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Welcome from "./Welcome";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const trainee = 'Rockstar FE';
@@ -22,5 +23,5 @@ function getGreeting(user) {
     return <h1>Hello, Stranger!</h1>;
 }
 
-root.render(element);
-
+// root.render(element);
+root.render(<Welcome/>);
